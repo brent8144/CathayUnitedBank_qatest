@@ -9,5 +9,7 @@ def draw_christmas_tree(leaf='*', ornament='0', height=5):
                 row += ornament
         print(spaces + row)
 
-# 範例：leaf='*'，ornament='0'，height=5
-draw_christmas_tree('*', '0', 10)
+# leaf='*'，ornament='0'，height=5
+draw_christmas_tree('*', '0', 5)
+
+# 20250721
