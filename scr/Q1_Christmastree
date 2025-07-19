@@ -1,0 +1,13 @@
+def draw_christmas_tree(leaf='*', ornament='0', height=5):
+    for i in range(height):
+        # 計算每一層需要的空格數，讓樹居中對齊
+        spaces = ' ' * (height - i - 1)
+        row = ''
+        for j in range(i + 1):
+            row += leaf
+            if j < i:
+                row += ornament
+        print(spaces + row)
+
+# 範例：leaf='*'，ornament='0'，height=5
+draw_christmas_tree('*', '0', 10)

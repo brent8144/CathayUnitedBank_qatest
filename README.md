@@ -18,7 +18,7 @@
 ```
 解答
 ```shell
-
+參考Q1_Christmastree.py
 ```
 
 ---
@@ -44,7 +44,7 @@
 ```
 解答
 ```shell
-
+參考Q2_Magic.py
 ```
 
 ---
