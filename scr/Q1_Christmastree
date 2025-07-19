@@ -1,4 +1,4 @@
-def draw_christmas_tree(leaf='*', ornament='0', height=5):
+def draw_christmas_tree(leaf='', ornament='', height=""):
     for i in range(height):
         # 計算每一層需要的空格數，讓樹居中對齊
         spaces = ' ' * (height - i - 1)
@@ -9,7 +9,7 @@ def draw_christmas_tree(leaf='*', ornament='0', height=5):
                 row += ornament
         print(spaces + row)
 
-# leaf='*'，ornament='0'，height=5
+# leaf=''，ornament=''，height=
 draw_christmas_tree('*', '0', 5)
 
 # 20250721
