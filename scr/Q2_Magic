@@ -1,27 +1,27 @@
-def 檢查咒語(咒語):
-    配對 = {')': '(', ']': '[', '}': '{'}
-    堆疊 = []
+def check_spell(spell):
+    pair = {')': '(', ']': '[', '}': '{'}
+    stack = []
 
-    for 字元 in 咒語:
-        if 字元 in '([{':
-            堆疊.append(字元)
-        elif 字元 in ')]}':
-            if not 堆疊 or 堆疊[-1] != 配對[字元]:
+    for char in spell:
+        if char in '([{':
+            stack.append(char)
+        elif char in ')]}':
+            if not stack or stack[-1] != pair[char]:
                 print("施法失敗")
                 return
-            堆疊.pop()
-        elif 字元 not in '([{':
+            stack.pop()
+        elif char not in '([{':
             print("施法失敗")
             return
 
-    if not 堆疊:
+    if not stack:
         print("施法成功")
     else:
         print("施法失敗")
 
 
-# 加入手動輸入功能
-咒語 = input("請輸入咒語（僅限括號符號）：")
-檢查咒語(咒語)
+# 手動輸入咒語
+spell = input("請輸入咒語（僅限括號符號）：")
+check_spell(spell)
 
-# 20250721
+# 20250722
