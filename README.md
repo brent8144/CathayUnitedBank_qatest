@@ -79,7 +79,7 @@ def check_spell(spell):
         print("施法失敗")
 
 
-# 手動輸入咒語
+# 輸入咒語
 spell = input("請輸入咒語（僅限括號符號）：")
 check_spell(spell)
 ```
