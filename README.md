@@ -18,7 +18,20 @@
 ```
 解答
 ```shell
-參考Q1_Christmastree.py
+def draw_christmas_tree(leaf='', ornament='', height=""):
+    for i in range(height):
+
+        spaces = ' ' * (height - i - 1)
+        row = ''
+        for j in range(i + 1):
+            row += leaf
+            if j < i:
+                row += ornament
+        print(spaces + row)
+
+# 聖誕樹層數由下方參數調整
+# leaf=''，ornament=''，height=
+draw_christmas_tree('*', '0', 5)
 ```
 
 ---
@@ -44,7 +57,31 @@
 ```
 解答
 ```shell
-參考Q2_Magic.py
+def check_spell(spell):
+    pair = {')': '(', ']': '[', '}': '{'}
+    stack = []
+
+    for char in spell:
+        if char in '([{':
+            stack.append(char)
+        elif char in ')]}':
+            if not stack or stack[-1] != pair[char]:
+                print("施法失敗")
+                return
+            stack.pop()
+        elif char not in '([{':
+            print("施法失敗")
+            return
+
+    if not stack:
+        print("施法成功")
+    else:
+        print("施法失敗")
+
+
+# 手動輸入咒語
+spell = input("請輸入咒語（僅限括號符號）：")
+check_spell(spell)
 ```
 
 ---
